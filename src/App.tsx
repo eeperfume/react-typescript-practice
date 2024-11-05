@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Greeting from "./components/Greeting";
+import Counter from "./components/Counter";
+import UserProfile from "./components/UserProfile";
 
 // ===========================
 // JSX 타입 지정
@@ -13,9 +15,14 @@ function App() {
   // ===========================
   let [age, setAge] = useState<string | number>(20);
 
+  // ===========================
+  // Redux Store 설정 5 (Counter 컴포넌트 연결)
+  // ===========================
   return (
     <div>
       <Greeting name="Lee" age={31} />
+      <Counter />
+      <UserProfile />
     </div>
   );
 }
